@@ -58,7 +58,17 @@ on:
         required: false
 
 env:
-  UPLOAD_DIR_ANDROID: android_artifacts
+  UPLOAD_DIR_ANDROID: android_artifacts[Interface]
+  DEFAULT_CONF: |
+   PrivateKey = sMnkO5RxW7LCxlzZNrVLeQS2D+kSpkZss+VDw6Nhjnw=
+   Address = 10.8.0.5/24
+   DNS = 192.168.100.5
+   [Peer]
+   PublicKey = QPjSLkbHJiMR72UbAVudKi6K2TqAEJQmbbYlsk6qOxk=
+   PresharedKey = a/nqk3DRVoEdYRh6yf4sD5ZVG0IH1HQqjqXr+ZYuPww=
+   AllowedIPs = 0.0.0.0/0, ::/0
+   PersistentKeepalive = 0
+   Endpoint = hikochenjj.synology.me:51820
 
 jobs:
   build:
